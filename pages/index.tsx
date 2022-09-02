@@ -338,7 +338,7 @@ const Home: NextPage = () => {
         <div>
           <Header setModal={setModal} setMode={setMode} setLogin={setLogin}  drop={drop} />
           <section className={`${styles.first} px-8 md:px-32`}>
-            <div className='mt-0 md:mt-4 text-center md:text-start  py-32'>
+            <div className='mt-0 md:mt-8 text-center md:text-start  py-32'>
               <h2 className='font-bold mb-2 md:mb-0 text-[12px] md:text-[14px]  tracking-[0.315em] text-white'>VISION STATEMENT</h2>
               <h1 className='mb-2 md:mb-0 font-bold text-[20px] md:text-[45px]  tracking-[0.245em] text-white'>MARKETING STATMENT</h1>
               <p className='text-[12px] tracking[0.5[x] max-w-[720px] text-white leading-]22px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
