@@ -1,0 +1,110 @@
+.logo{
+
+
+font-weight: 600;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+color: #177B57;
+letter-spacing: 0.245em;
+}
+
+.logo2{
+
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 39px;
+  /* identical to box height */
+  color: #177B57;
+  letter-spacing: 0.245em;
+  }
+
+.logo::after {
+  content: 'ARKA';
+  color: black;
+}
+
+
+.logo2::after {
+  content: 'ARKA';
+  color: white
+}
+
+
+.first {
+height: 528px;
+background: linear-gradient(88.1deg, #177B57 30.11%, rgba(23, 123, 87, 0.43) 191.75%);
+
+display: flex;
+justify-content: space-between;
+}
+
+.vision {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.315em;
+  color: white;
+  
+  margin-bottom: 7px;
+}
+
+.state {
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+
+letter-spacing: 0.245em;
+
+color: #FFFFFF;
+
+}
+
+.description {
+font-size: 13px;
+line-height: 22px;
+max-width: 780px;
+letter-spacing: 0.5px;
+
+color: #FFFFFF;
+}
+
+.illus {
+  height: 470px;
+  margin-top: 26px;
+}
+
+.supplier {
+background: linear-gradient(88.1deg, #177B57 30.11%, rgba(23, 123, 87, 0.43) 191.75%);
+
+}
+
+
+.bg {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-color: gray;
+}
+
+.modal {
+  z-index: 2;
+}
+
+.category {
+width: 400px;
+height: 200px;
+border-radius: 5px;
+}
+
+
+.pattern {
+  background-color: #DFDBE5;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
