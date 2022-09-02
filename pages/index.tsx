@@ -110,7 +110,7 @@ const Brands = [
     title: 'BRAND E'
   },
   {
-    title: 'BRAND F'
+    title: 'BRAND G'
   }
 ]
 const Products = [
