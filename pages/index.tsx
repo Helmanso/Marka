@@ -45,14 +45,14 @@ const Category = ({ title, image, index }: Catergory) => {
   if (index === 0) {
     return (
       <div className='relative group md:col-span-2 md:row-span-2 bg-[url("/images/cat1.png")] bg-cover min-h-[160px] max-h-[450px] rounded-md  flex items-end '>
-        <h1 className='p-2  text-xs md:text-base text-white font-bold bg-gray-400 w-44 text-center'>BIG APPLIENCES</h1>
+        <h1 className='p-2  text-xs md:text-[14px] text-white font-bold bg-gray-400 w-48 text-center'>BIG APPLIENCES</h1>
       </div>
     )
   }
   else if (index === 1) {
     return (
       <div className='md:col-span-1 bg-[url("/images/cat2.png")] bg-cover rounded-md  flex items-end min-h-[160px]'>
-        <h1 className='p-2 text-xs md:text-base text-white font-bold bg-gray-400 w-44 text-center'>SMALL APPLIENCES</h1>
+        <h1 className='p-2 text-xs md:text-[12px] text-white font-bold bg-gray-400 w-48 text-center'>SMALL APPLIENCES</h1>
 
       </div>
     )
@@ -60,7 +60,7 @@ const Category = ({ title, image, index }: Catergory) => {
   else if (index === 2) {
     return (
       <div className='md:col-span-1 bg-[url("/images/cat3.png")] bg-cover rounded-md  flex items-end min-h-[160px]'>
-        <h1 className='p-2 text-xs md:text-base text-white font-bold bg-gray-400 w-44 md:w-48 text-center uppercase'> electronic equipments </h1>
+        <h1 className='p-2 text-xs md:text-[12px] text-white font-bold bg-gray-400 w-48 text-center uppercase'> electronic equipments </h1>
 
       </div>
     )
@@ -68,7 +68,7 @@ const Category = ({ title, image, index }: Catergory) => {
   else {
     return (
       <div className='md:col-span-2  row-span-1 bg-[url("/images/cat4.png")] bg-cover h-52 rounded-md flex items-end'>
-        <h1 className='p-2 text-xs md:text-base text-white font-bold bg-gray-400 w-44 text-center uppercase'>computers and smartphones</h1>
+        <h1 className='p-2 text-xs md:text-[12px] text-white font-bold bg-gray-400 w-48 text-center uppercase'>computers and smartphones</h1>
 
       </div>
     )
@@ -203,12 +203,12 @@ const BrandsCard = ({ title }: Brands) => {
 const FeaturesCard = ({ icon, title, description }: Features) => {
   return (
 
-    <div className="relative flex flex-col items-center justify-center w-96 mb-2">
+    <div className="relative flex flex-col items-center justify-center w-[340px] mb-2">
 
       <div className="flex items-center justify-center w-5 h-5 md:w-14 md:h-14 rounded-full bg-white shadow-md">
         {icon}
       </div>
-      <h3 className="mt-4 text-sm md:text-lg font-semibold text-gray-700">{title}</h3>
+      <h3 className="mt-4 text-sm md:text-base font-semibold text-gray-700">{title}</h3>
       <p className="mt-3 text-[14px] text-gray-700 text-center">{description}</p>
 
     </div>
@@ -339,16 +339,16 @@ const Home: NextPage = () => {
           <Header setModal={setModal} setMode={setMode} setLogin={setLogin}  drop={drop} />
           <section className={`${styles.first} px-8 md:px-32`}>
             <div className='mt-0 md:mt-4 text-center md:text-start  py-32'>
-              <h2 className='font-bold mb-2 md:mb-0 text-[12px] md:text-[16px]  tracking-[0.315em] text-white'>VISION STATEMENT</h2>
-              <h1 className='mb-2 md:mb-0 font-bold text-[20px] md:text-[50px]  tracking-[0.245em] text-white'>MARKETING STATMENT</h1>
-              <p className='text-[14px] tracking[0.5[x] max-w-[780px] text-white leading-]22px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-              <button onClick={() => { setModal(!drop), setLogin('retailer'), setMode(!mode) }} id='retailer' className='mt-8 md:mt-14 bg-white px-10 md:px-24 py-3 rounded-md text-xs md:text-base'>REGISTER AS RETAILER</button>
+              <h2 className='font-bold mb-2 md:mb-0 text-[12px] md:text-[14px]  tracking-[0.315em] text-white'>VISION STATEMENT</h2>
+              <h1 className='mb-2 md:mb-0 font-bold text-[20px] md:text-[45px]  tracking-[0.245em] text-white'>MARKETING STATMENT</h1>
+              <p className='text-[12px] tracking[0.5[x] max-w-[720px] text-white leading-]22px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+              <button onClick={() => { setModal(!drop), setLogin('retailer'), setMode(!mode) }} id='retailer' className='mt-8 md:mt-12 bg-white px-10 md:px-24 py-3 rounded-md text-xs md:text-sm'>REGISTER AS RETAILER</button>
             </div>
             <div className='hidden md:block'>
               <img src='/illus.svg' className={styles.illus} />
             </div>
           </section>
-          <div className={`${styles.modal} ${modal ? 'block' : 'hidden'} overflow-y-auto overflow-x-hidden  absolute md:fixed top-0 right-0 left-0  h-full `}>
+          <div className={`${styles.modal} ${modal ? 'block' : 'hidden'} overflow-y-auto overflow-x-hidden  fixed top-24 md:-top-24 right-0 left-0  h-full `}>
             <div id="popup-modal" className="relative  mx-auto  w-full max-w-5xl  h-full md:h-auto md:mt-64 ">
               <div className={`relative bg-white rounded-lg shadow-xl ${!login && 'h-[640px]'} flex flex-col md:flex-row`}>
                 <div className={`${login === 'login' ? 'hidden' : 'block'} ${mode ? styles.supplier : 'white'} md:w-1/2`}>
@@ -376,7 +376,7 @@ const Home: NextPage = () => {
               </div>
             </section>
             <section className='relative mt-20  px-8 md:px-32 '>
-              <h1 className='text-gray-800 font-semibold tracking-wide text-md text-center'>SHOP BY CATEGORY</h1>
+              <h1 className='text-gray-800 font-semibold tracking-wide text-sm text-center'>SHOP BY CATEGORY</h1>
               <p className='text-center text-gray-600 text-md font-light mt-1'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
               <div className='mt-14  grid grid-cols-1 md:grid-cols-4  md:grid-rows-2 gap-4'>
                 {Categories.map((category, index) => (
@@ -385,7 +385,7 @@ const Home: NextPage = () => {
               </div>
             </section>
             <section className='mt-20 mb-40 px-8 md:px-32'>
-              <h1 className='text-center text-gray-800 font-semibold tracking-wide text-xs md:text-base'>LATEST HITS</h1>
+              <h1 className='text-center text-gray-800 font-semibold tracking-wide text-xs md:text-sm'>LATEST HITS</h1>
               <p className='text-center text-gray-600 text-xs md:text-base font-light mt-1'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
               <div className='hidden md:flex items-center mt-8 justify-end text-blue-400 gap-1 '>
                 <h1 className='text-en cursor-pointer'>View more</h1>
@@ -401,15 +401,15 @@ const Home: NextPage = () => {
             <section className='mb-10 '>
               <div className="bg-[url('/images/supp.jpeg')]  h-[450px] w-full bg-cover flex items-center md:pl-32">
                 <div className=' text-center md:text-start '>
-                  <h2 className='font-bold mb-2 md:mb-0 text-[12px] md:text-[16px]  tracking-[0.315em] text-white'>VISION STATEMENT</h2>
-                  <h1 className='mb-2 md:mb-0 font-bold text-[20px] md:text-[45px]  tracking-[0.245em] text-white'>MARKETING STATMENT</h1>
-                  <p className='text-[14px] tracking[0.5[x] max-w-[720px] text-white leading-]22px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                  <button onClick={() => { setModal(!drop), setLogin('supplier'), setMode(mode) }} id='retailer' className='mt-8 md:mt-14 bg-white px-10 md:px-24 py-3 rounded-md text-xs md:text-base'>REGISTER AS SUPPLIER</button>
+                  <h2 className='font-bold mb-2 md:mb-0 text-[12px] md:text-[14px]  tracking-[0.315em] text-white'>VISION STATEMENT</h2>
+                  <h1 className='mb-2 md:mb-0 font-bold text-[20px] md:text-[40px]  tracking-[0.245em] text-white'>MARKETING STATMENT</h1>
+                  <p className='text-[12px] tracking[0.5[x] max-w-[720px] text-white leading-]22px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                  <button onClick={() => { setModal(!drop), setLogin('supplier'), setMode(mode) }} id='retailer' className='mt-8 md:mt-14 bg-white px-10 md:px-24 py-3 rounded-md text-xs md:text-md'>REGISTER AS SUPPLIER</button>
                 </div>
               </div>
             </section>
             <section className='text-center pb-20 px-8 md:px-32'>
-              <h1 className='text-gray-800 font-semibold tracking-wide text-xs md:text-base'>OUR BRANDS</h1>
+              <h1 className='text-gray-800 font-semibold tracking-wide text-xs md:text-sm'>OUR BRANDS</h1>
               <div className='mt-8 flex flex-col  md:flex-row items-center  gap-8 md:gap-0 md:justify-between'>
                 {Brands.map((brand, index) => (
                   <BrandsCard key={index} {...brand} />
