@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link';
 import styles from '../styles/Home.module.css'
 import { User, UserPlus, ShoppingCart, Menu2, Clock, Home2, ShieldCheck, Heart, ArrowLeft, ArrowRight, CircleCheck } from 'tabler-icons-react';
 import { Dispatch, SetStateAction, useState } from 'react'
@@ -59,7 +60,7 @@ const Category = ({ title, image, index }: Catergory) => {
   else if (index === 2) {
     return (
       <div className='md:col-span-1 bg-[url("/images/cat3.png")] bg-cover rounded-md  flex items-end min-h-[160px]'>
-        <h1 className='p-2 text-xs md:text-base text-white font-bold bg-gray-400 w-44 md:w-48 text-center'>SMALL ELECTRONICS </h1>
+        <h1 className='p-2 text-xs md:text-base text-white font-bold bg-gray-400 w-44 md:w-48 text-center uppercase'> electronic equipments </h1>
 
       </div>
     )
@@ -67,7 +68,7 @@ const Category = ({ title, image, index }: Catergory) => {
   else {
     return (
       <div className='md:col-span-2  row-span-1 bg-[url("/images/cat4.png")] bg-cover h-52 rounded-md flex items-end'>
-        <h1 className='p-2 text-xs md:text-base text-white font-bold bg-gray-400 w-44 text-center'>BIG ELECTRONICS</h1>
+        <h1 className='p-2 text-xs md:text-base text-white font-bold bg-gray-400 w-44 text-center uppercase'>computers and smartphones</h1>
 
       </div>
     )
@@ -217,9 +218,9 @@ const FeaturesCard = ({ icon, title, description }: Features) => {
 type Props = {
   drop?: boolean | string;
   mode?: boolean | string;
-  setMode: React.Dispatch<React.SetStateAction<boolean | string>>;
-  setLogin: React.Dispatch<React.SetStateAction<boolean | string>>;
-  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+  setMode?: React.Dispatch<React.SetStateAction<boolean | string>>;
+  setLogin?: React.Dispatch<React.SetStateAction<boolean | string>>;
+  setModal?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Login = ({setLogin} : Props) => {
@@ -252,7 +253,7 @@ const Login = ({setLogin} : Props) => {
         <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300  " />
         <label htmlFor="default-checkbox" className="ml-2 text-sm font-thin tracking-wide">I have read and fully accept Marka's terms and conditions.</label>
       </div>
-      <button  id="sign" onClick={() => setLogin('login')} className="bg-black text-white mt-1 py-3 px-4  focus:outline-none focus:shadow-outline" type="button">
+      <button  id="sign" onClick={() => setLogin?.('login')} className="bg-black text-white mt-1 py-3 px-4  focus:outline-none focus:shadow-outline" type="button">
         Sign Up
       </button>
 
@@ -266,7 +267,7 @@ const Retailer = ({ mode, setMode, setLogin }: Props) => {
     <div className="flex flex-col items-center justify-center w-full h-full px-4">
       <h1 className={`text-3xl font-bold  ${!mode ? ' text-gray-100' : 'text-black'}`}>Are you a retailer?</h1>
       <p className={`text-gray-100  text-sm text-center mt-4 ${!mode ? ' text-gray-100' : 'text-black'}`}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-      <button onClick={() => { setMode(!mode), setLogin('retailer') }} id='button-modal' className="bg-white text-gray-800  py-2 px-10 mt-8 rounded-lg shadow-md hover:bg-gray-100">REGISTER AS A RETAILER</button>
+      <button onClick={() => { setMode?.(!mode), setLogin?.('retailer') }} id='button-modal' className="bg-white text-gray-800  py-2 px-10 mt-8 rounded-lg shadow-md hover:bg-gray-100">REGISTER AS A RETAILER</button>
     </div>
   )
 }
@@ -275,7 +276,7 @@ const Supplier = ({ mode, setMode, setLogin }: Props) => {
     <div className="flex flex-col items-center justify-center w-full h-full px-4">
       <h1 className={`text-md md:text-3xl font-bold ${mode ? ' text-gray-100' : 'text-black'}`}>Are you a supplier?</h1>
       <p className={`text-xs md:text-sm text-center mt-4 ${mode ? ' text-gray-100' : 'text-black'}`}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-      <button onClick={() => { setMode(mode == false ? false : false), setLogin('supplier') }} id='button-modal' className="bg-white text-gray-800  py-2 px-10 mt-8 rounded-lg text-xs md:text-base shadow-md hover:bg-gray-100">REGISTER AS A SUPPLIER</button>
+      <button onClick={() => { setMode?.(mode == false ? false : false), setLogin?.('supplier') }} id='button-modal' className="bg-white text-gray-800  py-2 px-10 mt-8 rounded-lg text-xs md:text-base shadow-md hover:bg-gray-100">REGISTER AS A SUPPLIER</button>
     </div>
   )
 }
@@ -285,9 +286,9 @@ export const Header = ({setModal, drop} :Props) => {
   return (
     <header className='bg-white  w-full  py-4'>
             <div className='flex justify-between items-center px-8 md:px-32'>
-              <a href="/" className={styles.logo}>M</a>
+              <Link href="/" ><a className={styles.logo}>M</a></Link>
               <div className='relative hidden md:flex items-center gap-12 '>
-                <button className='drop' onClick={() => setModal(!drop)}><UserPlus strokeWidth={1.2} size={35} /></button>
+                <button className='drop' onClick={() => setModal?.(!drop)}><UserPlus strokeWidth={1.2} size={35} /></button>
                 <button><ShoppingCart strokeWidth={1.2} size={35} /></button>
               </div>
               <button className='block md:hidden'><Menu2 /></button>
@@ -301,7 +302,7 @@ const Success = ({setLogin, setMode, setModal} : Props) => {
       <h1 className='text-md md:text-3xl text-gray-700 tracking-wider  text-center mb-2'>Thank you for registering</h1>
       <CircleCheck size={124} strokeWidth={0.5}/>
       <p className='text-gray-700 text-xs md:text-base text-center mt-4 md:mx-20'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-      <button onClick={() => {setLogin(false), setModal(false), setMode(false)}} className='mt-9 px-20 md:px-32 bg-bag-def py-3 text-xs md:text-base text-white font-semibold rounded-md'>Back Home</button>
+      <button onClick={() => {setLogin?.(false), setModal?.(false), setMode?.(false)}} className='mt-9 px-20 md:px-32 bg-bag-def py-3 text-xs md:text-base text-white font-semibold rounded-md'>Back Home</button>
     </div>
   )
 }
@@ -335,7 +336,7 @@ const Home: NextPage = () => {
       <main className='relative'>
         <div className={`${styles.bg} ${modal ? 'block' : 'hidden'}`}></div>
         <div>
-          <Header setModal={setModal} drop={drop} />
+          <Header setModal={setModal} setMode={setMode} setLogin={setLogin}  drop={drop} />
           <section className={`${styles.first} px-8 md:px-32`}>
             <div className='mt-0 md:mt-4 text-center md:text-start  py-32'>
               <h2 className='font-bold mb-2 md:mb-0 text-[12px] md:text-[16px]  tracking-[0.315em] text-white'>VISION STATEMENT</h2>
