@@ -44,7 +44,7 @@ const Stars = () => {
 const Category = ({ title, image, index }: Catergory) => {
   if (index === 0) {
     return (
-      <div className='relative group md:col-span-2 md:row-span-2 bg-[url("/images/cat1.png")] bg-cover min-h-[160px] max-h-[450px] rounded-md  flex items-end '>
+      <div className='relative group md:col-span-2 md:row-span-2 bg-[url("/images/cat1.png")] bg-cover min-h-[160px] max-h-[450px] rounded-md  flex items-end   '>
         <h1 className='p-2  text-xs md:text-[14px] text-white font-bold bg-gray-400 w-48 text-center'>BIG APPLIENCES</h1>
       </div>
     )
@@ -120,31 +120,31 @@ const Products = [
   },
   {
     title: 'EXEMPLE PRODUCT',
-    image: '/images/product1.png',
+    image: '/images/laptop.png',
   },
   {
     title: 'EXEMPLE PRODUCT',
-    image: '/images/product1.png',
+    image: '/images/product2.png',
   },
   {
     title: 'EXEMPLE PRODUCT',
-    image: '/images/product1.png',
+    image: '/images/product4.png',
   },
   {
     title: 'EXEMPLE PRODUCT',
-    image: '/images/product1.png',
+    image: '/images/product5.png',
   },
   {
     title: 'EXEMPLE PRODUCT',
-    image: '/images/product1.png',
+    image: '/images/product6.png',
   },
   {
     title: 'EXEMPLE PRODUCT',
-    image: '/images/product1.png',
+    image: '/images/product7.png',
   },
   {
     title: 'EXEMPLE PRODUCT',
-    image: '/images/product1.png',
+    image: '/images/product8.png',
   }
 ]
 
