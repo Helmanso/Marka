@@ -203,7 +203,7 @@ const BrandsCard = ({ title }: Brands) => {
 const FeaturesCard = ({ icon, title, description }: Features) => {
   return (
 
-    <div className="relative flex flex-col items-center justify-center w-[340px] mb-2">
+    <div className="relative flex flex-col items-center justify-center max-w-[340px] mb-2">
 
       <div className="flex items-center justify-center w-5 h-5 md:w-14 md:h-14 rounded-full bg-white shadow-md">
         {icon}
@@ -366,16 +366,16 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <section className='bg-gray-100'>
+          <section className='bg-bag-default'>
             <section className={`${styles.second} px-8 md:px-32 flex flex-col`}>
-              <div className='flex flex-wrap mt-10 gap-2 justify-center  lg:justify-between'>
+              <div className='mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  place-items-center'>
                 {Features.map((feature, index) => (
                   <FeaturesCard key={index} {...feature} />
                 ))}
 
               </div>
             </section>
-            <section className='relative mt-20  px-8 md:px-32 '>
+            <section className='relative mt-24  px-8 md:px-32 '>
               <h1 className='text-gray-800 font-semibold tracking-wide text-sm text-center'>SHOP BY CATEGORY</h1>
               <p className='text-center text-gray-600 text-md font-light mt-1'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
               <div className='mt-14  grid grid-cols-1 md:grid-cols-4  md:grid-rows-2 gap-4'>
