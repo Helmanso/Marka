@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link';
 import styles from '../styles/Home.module.css'
-import { User, UserPlus, ShoppingCart, Menu2, Clock, Home2, ShieldCheck, Heart, ArrowLeft, ArrowRight, CircleCheck } from 'tabler-icons-react';
+import { User, UserPlus, ShoppingCart, Menu2, Clock, Home2, ShieldCheck, Heart, ArrowLeft, ArrowRight, CircleCheck, Truck} from 'tabler-icons-react';
 import { Dispatch, SetStateAction, useState } from 'react'
 
 
@@ -185,7 +185,7 @@ const Features = [
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum'
   },
   {
-    icon: <ShieldCheck size={35} color='#177B57' />,
+    icon: <Truck size={35} color='#177B57' />,
     title: 'PROP HERE',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum'
   },
