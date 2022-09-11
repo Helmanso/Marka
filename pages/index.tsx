@@ -341,7 +341,7 @@ const Home: NextPage = () => {
           <section className={`${styles.first} px-8 md:px-32`}>
             <div className='mt-0 md:mt-12 text-center md:text-start  py-32'>
               <h2 className='font-semibold mb-2 md:mb-0 text-[16px] md:text-[28px]  tracking-[0.415em] text-white'>MARKA</h2>
-              <h1 className='mb-2 md:mb-1 font-bold text-[15px] md:text-[35px]  tracking-[0.200em] text-white uppercase'>The retailers <a className='text-black'>one-stop-shop</a></h1>
+              <h1 className='mb-2 md:mb-1 font-bold text-[15px] md:text-[35px]  tracking-[0.200em] text-white uppercase'>The retailers one-stop-shop</h1>
               <p className='text-[15px] font-[200] tracking-[2px] max-w-[720px] text-white '>Sourcing the best products from international brands 
 have never been as easy</p>
               <button onClick={() => { setModal(!drop), setLogin('retailer'), setMode(!mode) }} id='retailer' className='mt-8 md:mt-10 bg-white px-10 md:px-24 py-3 rounded-md text-xs md:text-sm'>REGISTER AS RETAILER</button>
