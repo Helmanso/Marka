@@ -85,7 +85,7 @@ const ProductsCard = ({ title, image, price }: Products) => {
       </div>
 
       <div className='flex justify-between items-center w-full mt-2 px-4'>
-        <h1 className='text-sm text-gray-700 font-semibold ml-1'>Simple Product</h1>
+        <h1 className='text-sm text-gray-700 font-semibold ml-1'>Simple</h1>
         <Heart className='absolute right-4 bottom-7' />
       </div>
     </div>
@@ -171,23 +171,23 @@ const Categories = [
 const Features = [
   {
     icon: <Clock size={35} color='#177B57' />,
-    title: 'PROP HERE',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum'
+    title: 'Extensive product offering',
+    description: 'Get access to an extensive product inventory from the best global brands across the world'
   },
   {
     icon: <Home2 size={35} color='#177B57' />,
-    title: 'PROP HERE',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum'
+    title: 'Satisfaction guaranteed',
+    description: 'Benefit from our flexible return policy and Insurance on your valuable products'
   },
   {
     icon: <ShieldCheck size={35} color='#177B57' />,
-    title: 'PROP HERE',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum'
+    title: 'Flexible payment options',
+    description: 'Select the more convenient option including cash-on-delivery and buy-now-pay-later'
   },
   {
     icon: <Truck size={35} color='#177B57' />,
-    title: 'PROP HERE',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum'
+    title: 'Fast delivery',
+    description: 'Receive your products at your door-step in less than 7 days'
   },
 
 ]
@@ -227,8 +227,7 @@ const Login = ({setLogin} : Props) => {
 
   return (
     <div className="rounded px-8 pt-6 pb-6 h-full flex flex-col text-xs md:text-base">
-      <h1 className='text-md md:text-lg text-center mt-2'>Lorem ipsum dolor sit amet consectetur</h1>
-      <p className='text-center text-xs md:text-sm text-gray-900 mt-2'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero eveniet</p>
+      <h1 className='text-md md:text-lg text-center mt-2'>Marka is among the fastest growing and highly-recommended B2B marketplaces</h1>
       <div className="mt-10 mb-4">
 
         <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="Fullname" type="text" placeholder="Full Name" />
@@ -266,7 +265,8 @@ const Retailer = ({ mode, setMode, setLogin }: Props) => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full px-4">
       <h1 className={`text-3xl font-bold  ${!mode ? ' text-gray-100' : 'text-black'}`}>Are you a retailer?</h1>
-      <p className={`text-gray-100  text-sm text-center mt-4 ${!mode ? ' text-gray-100' : 'text-black'}`}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+      <p className={`text-gray-100  text-sm text-center mt-4 ${!mode ? ' text-gray-100' : 'text-black'}`}>Sourcing the best products from international brands  have never been as easy
+</p>
       <button onClick={() => { setMode?.(!mode), setLogin?.('retailer') }} id='button-modal' className="bg-white text-gray-800  py-2 px-10 mt-8 rounded-lg shadow-md hover:bg-gray-100">REGISTER AS A RETAILER</button>
     </div>
   )
@@ -275,7 +275,7 @@ const Supplier = ({ mode, setMode, setLogin }: Props) => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full px-4">
       <h1 className={`text-md md:text-3xl font-bold ${mode ? ' text-gray-100' : 'text-black'}`}>Are you a supplier?</h1>
-      <p className={`text-xs md:text-sm text-center mt-4 ${mode ? ' text-gray-100' : 'text-black'}`}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+      <p className={`text-xs md:text-sm text-center mt-4 ${mode ? ' text-gray-100' : 'text-black'}`}>We provide end-to-end support to your sales  operations from logistics management and customs  clearance to payment processing</p>
       <button onClick={() => { setMode?.(mode == false ? false : false), setLogin?.('supplier') }} id='button-modal' className="bg-white text-gray-800  py-2 px-10 mt-8 rounded-lg text-xs md:text-base shadow-md hover:bg-gray-100">REGISTER AS A SUPPLIER</button>
     </div>
   )
@@ -301,7 +301,8 @@ const Success = ({setLogin, setMode, setModal} : Props) => {
     <div className='flex flex-col items-center p-8'>
       <h1 className='text-md md:text-3xl text-gray-700 tracking-wider  text-center mb-2'>Thank you for registering</h1>
       <CircleCheck size={124} strokeWidth={0.5}/>
-      <p className='text-gray-700 text-xs md:text-base text-center mt-4 md:mx-20'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+      <p className='text-gray-700 text-xs md:text-base text-center mt-4 md:mx-20'>Thank you for registering! We look forward to seeing you when the makra store will start officially
+</p>
       <button onClick={() => {setLogin?.(false), setModal?.(false), setMode?.(false)}} className='mt-9 px-20 md:px-32 bg-bag-def py-3 text-xs md:text-base text-white font-semibold rounded-md'>Back Home</button>
     </div>
   )
@@ -338,11 +339,12 @@ const Home: NextPage = () => {
         <div>
           <Header setModal={setModal} setMode={setMode} setLogin={setLogin}  drop={drop} />
           <section className={`${styles.first} px-8 md:px-32`}>
-            <div className='mt-0 md:mt-8 text-center md:text-start  py-32'>
-              <h2 className='font-bold mb-2 md:mb-0 text-[12px] md:text-[14px]  tracking-[0.315em] text-white'>VISION STATEMENT</h2>
-              <h1 className='mb-2 md:mb-0 font-bold text-[20px] md:text-[45px]  tracking-[0.245em] text-white'>MARKETING STATMENT</h1>
-              <p className='text-[12px] tracking[0.5[x] max-w-[720px] text-white leading-]22px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-              <button onClick={() => { setModal(!drop), setLogin('retailer'), setMode(!mode) }} id='retailer' className='mt-8 md:mt-12 bg-white px-10 md:px-24 py-3 rounded-md text-xs md:text-sm'>REGISTER AS RETAILER</button>
+            <div className='mt-0 md:mt-12 text-center md:text-start  py-32'>
+              <h2 className='font-semibold mb-2 md:mb-0 text-[16px] md:text-[28px]  tracking-[0.415em] text-white'>MARKA</h2>
+              <h1 className='mb-2 md:mb-1 font-bold text-[15px] md:text-[35px]  tracking-[0.200em] text-white uppercase'>The retailers <a className='text-black'>one-stop-shop</a></h1>
+              <p className='text-[15px] font-[200] tracking-[2px] max-w-[720px] text-white '>Sourcing the best products from international brands 
+have never been as easy</p>
+              <button onClick={() => { setModal(!drop), setLogin('retailer'), setMode(!mode) }} id='retailer' className='mt-8 md:mt-10 bg-white px-10 md:px-24 py-3 rounded-md text-xs md:text-sm'>REGISTER AS RETAILER</button>
             </div>
             <div className='hidden md:block'>
               <img src='/illus.svg' className={styles.illus} />
@@ -377,7 +379,6 @@ const Home: NextPage = () => {
             </section>
             <section className='relative mt-24  px-8 md:px-32 '>
               <h1 className='text-gray-800 font-semibold tracking-wide text-sm text-center'>SHOP BY CATEGORY</h1>
-              <p className='text-center text-gray-600 text-md font-light mt-1'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
               <div className='mt-14  grid grid-cols-1 md:grid-cols-4  md:grid-rows-2 gap-4'>
                 {Categories.map((category, index) => (
                   <Category key={index} index={index} {...category} />
@@ -386,7 +387,6 @@ const Home: NextPage = () => {
             </section>
             <section className='mt-20 mb-40 px-8 md:px-32'>
               <h1 className='text-center text-gray-800 font-semibold tracking-wide text-xs md:text-sm'>LATEST HITS</h1>
-              <p className='text-center text-gray-600 text-xs md:text-base font-light mt-1'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
               <div className='hidden md:flex items-center mt-8 justify-end text-blue-400 gap-1 '>
                 <h1 className='text-en cursor-pointer'>View more</h1>
                 <ArrowRight size={20} />
@@ -400,11 +400,13 @@ const Home: NextPage = () => {
             </section>
             <section className='mb-10 '>
               <div className="bg-[url('/images/supp.jpeg')]  h-[450px] w-full bg-cover flex items-center md:pl-32">
-                <div className=' text-center md:text-start '>
-                  <h2 className='font-bold mb-2 md:mb-0 text-[12px] md:text-[14px]  tracking-[0.315em] text-white'>VISION STATEMENT</h2>
-                  <h1 className='mb-2 md:mb-0 font-bold text-[20px] md:text-[40px]  tracking-[0.245em] text-white'>MARKETING STATMENT</h1>
-                  <p className='text-[12px] tracking[0.5[x] max-w-[720px] text-white leading-]22px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                  <button onClick={() => { setModal(!drop), setLogin('supplier'), setMode(mode) }} id='retailer' className='mt-8 md:mt-14 bg-white px-10 md:px-24 py-3 rounded-md text-xs md:text-md'>REGISTER AS SUPPLIER</button>
+                <div className=' text-center md:text-start'>
+                <h2 className='font-semibold mb-4 md:mb-0 text-[12px] md:text-[28px]  tracking-[0.415em] text-white'>MARKA</h2>
+                  <h1 className='mb-2 md:mb-0 font-bold text-[20px] md:text-[40px]  tracking-[0.145em] text-white uppercase'>Your partner for growth</h1>
+                  <p className='text-[15px] font-[200] max-w-[720px] text-white'>We provide end-to-end support to your sales 
+operations from logistics management and customs 
+clearance to payment processing</p>
+                  <button onClick={() => { setModal(!drop), setLogin('supplier'), setMode(mode) }} id='retailer' className='mt-8 md:mt-10 bg-white px-10 md:px-24 py-3 rounded-md text-xs md:text-md'>REGISTER AS SUPPLIER</button>
                 </div>
               </div>
             </section>
@@ -420,7 +422,7 @@ const Home: NextPage = () => {
           <footer>
             <div className='bg-black py-8 md:px-32 text-center md:text-start'>
                 <h1 className={styles.logo2}>M</h1>
-                <h2 className='mt-3 mb-2 md:mb-0 text-xs md:text-sm  tracking-[0.215em]  md:tracking-[0.615em] text-white'>VISION STATEMENT</h2>
+                <h2 className='mt-3 mb-2 md:mb-0 text-xs md:text-sm  tracking-[0.215em]  md:tracking-[0.415em] text-white uppercase'>The retailers one-stop-shop</h2>
             <div className='hidden md:block mt-8 w-full h-[1px] bg-gray-100 mx-auto'></div>
             <h1 className='text-gray-200 text-sm tracking-wide text-center mt-4'>©2022 MARKA. All rights reserved.</h1>
             </div>
