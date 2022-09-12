@@ -45,14 +45,14 @@ const Category = ({ title, image, index }: Catergory) => {
   if (index === 0) {
     return (
       <div className='relative group md:col-span-2 md:row-span-2 bg-[url("/images/cat1.png")] bg-cover min-h-[160px] max-h-[450px] rounded-md  flex items-end   '>
-        <h1 className='p-2  text-xs md:text-[14px] text-white font-bold bg-gray-400 w-48 text-center'>BIG APPLIENCES</h1>
+        <h1 className='p-2  text-xs md:text-[14px] text-white font-bold bg-gray-400 w-48 text-center'>BIG APPLIANCES</h1>
       </div>
     )
   }
   else if (index === 1) {
     return (
       <div className='md:col-span-1 bg-[url("/images/cat2.png")] bg-cover rounded-md  flex items-end min-h-[160px]'>
-        <h1 className='p-2 text-xs md:text-[12px] text-white font-bold bg-gray-400 w-48 text-center'>SMALL APPLIENCES</h1>
+        <h1 className='p-2 text-xs md:text-[12px] text-white font-bold bg-gray-400 w-48 text-center'>SMALL APPLIANCES</h1>
 
       </div>
     )
@@ -85,7 +85,7 @@ const ProductsCard = ({ title, image, price }: Products) => {
       </div>
 
       <div className='flex justify-between items-center w-full mt-2 px-4'>
-        <h1 className='text-sm text-gray-700 font-semibold ml-1'>Simple</h1>
+        <h1 className='text-sm text-gray-700 font-semibold ml-1'>Sample</h1>
         <Heart className='absolute right-4 bottom-7' />
       </div>
     </div>
