@@ -194,7 +194,7 @@ const Features = [
 
 const BrandsCard = ({ title }: Brands) => {
   return (
-    <div className='bg-white  py-20 px-16 rounded shadow-md'>
+    <div className='bg-white  py-20 px-16  rounded shadow-md'>
       <h1 className='font-thin text-xs md:text-base mb-1 '>{title}</h1>
     </div>
   )
@@ -412,7 +412,7 @@ clearance to payment processing</p>
             </section>
             <section className='text-center pb-20 px-8 md:px-32'>
               <h1 className='text-gray-800 font-semibold tracking-wide text-xs md:text-sm'>OUR BRANDS</h1>
-              <div className='mt-8 flex flex-col  md:flex-row items-center  gap-8 md:gap-0 md:justify-between'>
+              <div className='mt-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4  place-items-center'>
                 {Brands.map((brand, index) => (
                   <BrandsCard key={index} {...brand} />
                 ))}
